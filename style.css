@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins"), url(fonts/poppins-light-webfont.woff2) format("woff2"),
+    url(fonts/poppins-light-webfont.woff) format("woff");
+  font-weight: 300;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 3.6rem;
+  color: #7878ab;
+  background-color: #f5f5fa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 4.4rem;
+  height: 6.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.5s;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  box-shadow: -5px -5px 10px 0px #fff inset,
+    5px 5px 10px 0px rgba(170, 170, 204, 0.5) inset,
+    2px 2px 4px 0px rgba(170, 170, 204, 0.25) inset,
+    -2px -2px 4px 0px rgba(255, 255, 255, 0.5) inset;
+  padding: 1.2rem 3.2rem;
+  font-size: 2.6rem;
+  border-radius: 4rem;
+  border: none;
+  outline: none;
+  color: #656591;
+}
+
+.input::placeholder {
+  font-size: 2.6rem;
+  color: #7878ab;
+
+  transition: all 0.3s;
+}
+
+.input:focus::placeholder {
+  opacity: 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #7878ab;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: -5px -5px 10px 0px #fff, 5px 5px 10px 0px rgba(170, 170, 204, 0.5);
+  margin-left: -5.1rem;
+
+  transition: all 0.3s;
+}
+
+.btn--close {
+  opacity: 0;
+  z-index: -1;
+}
+
+.btn--close-clicked {
+  opacity: 1;
+  z-index: 1;
+  margin-left: -12rem;
+}
+
+.icon {
+  fill: white;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.container-clicked {
+  width: 36rem;
+}
+
+.btn-clicked {
+  margin-left: 2rem;
+}
+
+@media only screen and (min-height: 43.5em) {
+  .btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: 33em) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    transform: translateX(-2rem);
+  }
+}
